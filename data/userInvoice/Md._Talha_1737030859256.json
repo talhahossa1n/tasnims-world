@@ -1,0 +1,18 @@
+{
+  "firstName": "Md. Talha",
+  "lastName": "Hossain",
+  "email": "talhahossain56.01@gmail.com",
+  "address": "5-D, Shanti Nibash, Bhashantek, Dhaka Cantonment",
+  "address2": "",
+  "city": "Dhaka",
+  "district": "Dhaka",
+  "zip": "1206",
+  "gridCheck": "on",
+  "cart": [
+    {
+      "name": "Design 1",
+      "price": 23,
+      "quantity": 1
+    }
+  ]
+}
