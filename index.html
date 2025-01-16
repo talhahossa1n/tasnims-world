@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en" class="index-html">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tasnim's World</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+  </head>
+  <body style="background-color: #dc3546f9 !important" class="index-body">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+      <a class="navbar-brand" href="#">Tasnim's World</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/products.html">Products</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link open-cart cart-icon" href="#"
+              ><i class="fas fa-shopping-cart "></i>
+              <span class="cart-badge"></span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container mt-4">
+      <div class="row g-1">
+        <!-- Reduce spacing with g-1 -->
+        <!-- Intro Column -->
+        <div class="col-lg-6 col-md-12">
+          <div class="intro">
+            <h1>Welcome to <strong>Tasnim's World</strong>!</h1>
+            <p class="lead">
+              Discover a vibrant collection of unique and creative t-shirt
+              designs crafted by
+              <strong>Marzia Tasnim</strong>, a passionate graphic designer.
+            </p>
+            <p class="font-italic">Tasnim's World - Where art meets fashion.</p>
+          </div>
+        </div>
+
+        <!-- Carousel Column -->
+        <div class="col-lg-6 col-md-12">
+          <div
+            id="carouselExampleIndicators"
+            class="carousel slide"
+            data-ride="carousel"
+          >
+            <ol class="carousel-indicators">
+              <li
+                data-target="#carouselExampleIndicators"
+                data-slide-to="0"
+                class="active"
+              ></li>
+              <li
+                data-target="#carouselExampleIndicators"
+                data-slide-to="1"
+              ></li>
+              <li
+                data-target="#carouselExampleIndicators"
+                data-slide-to="2"
+              ></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <a href="products.html"
+                  ><img
+                    src="images/design1.jpg"
+                    class="d-block w-100"
+                    alt="Design 1"
+                /></a>
+              </div>
+              <div class="carousel-item">
+                <a href="products.html"
+                  ><img
+                    src="images/design2.jpg"
+                    class="d-block w-100"
+                    alt="Design 2"
+                /></a>
+              </div>
+              <div class="carousel-item">
+                <a href="products.html"
+                  ><img
+                    src="images/design3.jpg"
+                    class="d-block w-100"
+                    alt="Design 3"
+                /></a>
+              </div>
+            </div>
+            <a
+              class="carousel-control-prev"
+              href="#carouselExampleIndicators"
+              role="button"
+              data-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a
+              class="carousel-control-next"
+              href="#carouselExampleIndicators"
+              role="button"
+              data-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cart Sidebar -->
+    <div id="cartSidebar" class="cart-sidebar">
+      <div class="cart-header text-white p-3 d-flex justify-content-between">
+        <h4>Your Cart</h4>
+        <button class="btn btn-close close-cart text-white">&times;</button>
+      </div>
+      <div class="cart-items p-3">
+        <p>No items in the cart yet!</p>
+      </div>
+      <div class="cart-footer p-3">
+        <button class="btn btn-light w-100 checkout-btn">Checkout</button>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer text-center text-white">
+      <p class="mt-3">&copy; 2025 Tasnim's World. All rights reserved.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

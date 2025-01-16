@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products - Tasnim's World</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+  </head>
+  <body style="background-color: #dc35465d">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+      <a class="navbar-brand" href="index.html">Tasnim's World</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="products.html">Products</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link open-cart cart-icon" href="#"
+              ><i class="fas fa-shopping-cart"></i>
+              <span class="cart-badge"></span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Products Section -->
+    <div class="container mt-4">
+      <div class="row">
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="card mb-4">
+            <img src="images/design1.jpg" class="card-img-top" alt="Design 1" />
+            <div class="card-body">
+              <h5 class="card-title">Design 1</h5>
+              <p class="card-text">$23.00</p>
+              <a href="#" class="btn btn-danger">Add to Cart</a>
+              <a href="#" class="btn btn-outline-danger">Buy Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="card mb-4">
+            <img src="images/design2.jpg" class="card-img-top" alt="Design 2" />
+            <div class="card-body">
+              <h5 class="card-title">Design 2</h5>
+              <p class="card-text">$25.00</p>
+              <a href="#" class="btn btn-danger">Add to Cart</a>
+              <a href="#" class="btn btn-outline-danger">Buy Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3 card-holder">
+          <div class="card mb-4">
+            <img src="images/design3.jpg" class="card-img-top" alt="Design 3" />
+            <div class="card-body">
+              <h5 class="card-title">Design 3</h5>
+              <p class="card-text">$30.00</p>
+              <a href="#" class="btn btn-danger">Add to Cart</a>
+              <a href="#" class="btn btn-outline-danger">Buy Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="card mb-4">
+            <img
+              src="images/design4.jpeg"
+              class="card-img-top"
+              alt="Design 4"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Design 4</h5>
+              <p class="card-text">$28.00</p>
+              <a href="#" class="btn btn-danger">Add to Cart</a>
+              <a href="#" class="btn btn-outline-danger">Buy Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="card mb-4">
+            <img
+              src="images/design5.jpeg"
+              class="card-img-top"
+              alt="Design 5"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Design 5</h5>
+              <p class="card-text">$31.00</p>
+              <a href="#" class="btn btn-danger">Add to Cart</a>
+              <a href="#" class="btn btn-outline-danger">Buy Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="card mb-4">
+            <img src="images/design6.jpg" class="card-img-top" alt="Design 6" />
+            <div class="card-body">
+              <h5 class="card-title">Design 6</h5>
+              <p class="card-text">$25.00</p>
+              <a href="#" class="btn btn-danger">Add to Cart</a>
+              <a href="#" class="btn btn-outline-danger">Buy Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cart Sidebar -->
+    <div id="cartSidebar" class="cart-sidebar">
+      <div class="cart-header text-white p-3 d-flex justify-content-between">
+        <h4>Your Cart</h4>
+        <button class="btn btn-close close-cart text-white">&times;</button>
+      </div>
+      <div class="cart-items p-3">
+        <p>No items in the cart yet!</p>
+      </div>
+      <div class="cart-footer p-3">
+        <button class="btn btn-light w-100 checkout-btn">Checkout</button>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center mt-4 text-white">
+      <p class="mt-3">&copy; 2025 Tasnim's World. All rights reserved.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
