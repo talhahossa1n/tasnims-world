@@ -57,6 +57,3 @@
 ---
 
 Overall, **Tasnim's World** aims to provide a delightful shopping experience for users looking for unique and creative t-shirt designs.
-
-### Repository Link
-[Visit the repository on GitHub](https://github.com/talhahossa1n/tasnims-world)
