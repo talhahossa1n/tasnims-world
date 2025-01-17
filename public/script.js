@@ -4,8 +4,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const openCartBtns = document.querySelectorAll('.open-cart, .btn-outline-danger');
     const closeCartBtn = document.querySelector('.close-cart');
     const checkoutBtn = document.querySelector('.checkout-btn');
-    const orderSummary = document.getElementById('orderSummary');
-    const checkoutForm = document.getElementById('checkoutForm');
     const cartBadge = document.querySelector('.cart-icon .cart-badge');
 
     // Initialize cart from localStorage
@@ -61,44 +59,6 @@ document.addEventListener('DOMContentLoaded', () => {
         localStorage.setItem('cart', JSON.stringify(cart));
     }
 
-    // Utility function to update the order summary UI
-    function updateOrderSummary() {
-        if (!orderSummary) return;
-
-        orderSummary.innerHTML = ''; // Clear current order summary
-
-        if (cart.length === 0) {
-            orderSummary.innerHTML = '<p>No items in the cart yet!</p>';
-            return;
-        }
-
-        let total = 0;
-        cart.forEach((item, index) => {
-            const itemTotal = item.price * item.quantity;
-            total += itemTotal;
-
-            const orderItem = document.createElement('li');
-            orderItem.className = 'list-group-item d-flex justify-content-between lh-condensed';
-            orderItem.innerHTML = `
-                <div>
-                    <h6 class="my-0">${item.name}</h6>
-                    <small class="text-muted">${item.quantity} x $${item.price.toFixed(2)}</small>
-                </div>
-                <span class="text-muted">$${itemTotal.toFixed(2)}</span>
-            `;
-
-            orderSummary.appendChild(orderItem);
-        });
-
-        const totalElement = document.createElement('li');
-        totalElement.className = 'list-group-item d-flex justify-content-between';
-        totalElement.innerHTML = `
-            <span>Total (USD)</span>
-            <strong>$${total.toFixed(2)}</strong>
-        `;
-        orderSummary.appendChild(totalElement);
-    }
-
     // Open cart sidebar
     openCartBtns.forEach((btn) => {
         btn.addEventListener('click', (event) => {
@@ -124,7 +84,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         updateCartUI();
-        updateOrderSummary();
     }
 
     // Event listener for "Add to Cart" buttons
@@ -174,7 +133,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         updateCartUI();
-        updateOrderSummary();
     });
 
     // Redirect to checkout page on "Checkout" button click
@@ -184,35 +142,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Handle checkout form submission
-    if (checkoutForm) {
-        checkoutForm.addEventListener('submit', (event) => {
-            event.preventDefault();
-
-            const formData = new FormData(event.target);
-            const formObject = Object.fromEntries(formData.entries());
-            formObject.cart = cart;
-
-            fetch('/checkout', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(formObject)
-            })
-            .then(response => response.json())
-            .then(data => {
-                alert('Order placed successfully!');
-                localStorage.removeItem('cart'); // Clear cart after successful order
-                window.location.href = '/';
-            })
-            .catch(error => {
-                console.error('Error:', error);
-            });
-        });
-    }
-
-    // Initial render of the cart and order summary
+    // Initial render of the cart
     updateCartUI();
-    updateOrderSummary();
 });
